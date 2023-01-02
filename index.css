@@ -1,0 +1,58 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: 2px blue dotted;
+    min-width: 450px;
+}
+
+
+#main-form>* {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    margin: 5px;
+}
+
+#main-form-color {
+    height: 50px;
+    margin-right: 5px;
+}
+
+#main-form-scheme {
+    margin: 0px 5px;
+    text-align: inherit;
+    width: 70%;
+    height: 50px;
+}
+
+.colorbox {
+    border: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+.colorbox>div {
+    display: flex;
+    border: inherit;
+}
+
+.colorbox>div>div {
+    width: 20%;
+    border: inherit;
+}
+
+.colorbox-colors {
+    height: 90%;
+}
+
+.colorbox-hex {
+    height: 10%;
+}
