@@ -2,20 +2,29 @@
 
 <head>
     <title>Color Scheme Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prosto+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <div id="main">
-        <h1>Color Picker</h1>
+        <h1>Color Scheme Generator</h1>
         <div id="main-form">
             <form id="form-id">
                 <input type="color" id="main-form-color" />
                 <select id="main-form-scheme">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
+                    <option value="monochrome">monochrome</option>
+                    <option value="monochrome-dark">monochrome-dark</option>
+                    <option value="monochrome-light">monochrome-light</option>
+                    <option value="analogic">analogic</option>
+                    <option value="complement">complement</option>
+                    <option value="analogic-complement">analogic-complement</option>
+                    <option value="triad">triad</option>
+                    <option value="quad">quad</option>
                 </select>
-                <button id="generate-color-scheme">Get Color Scheme </button>
+                <button id="generate-color-scheme">Generate</button>
             </form>
         </div>
         <div class="colorbox">

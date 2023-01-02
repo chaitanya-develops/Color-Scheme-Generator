@@ -15,8 +15,9 @@ const formEl = document.getElementById("form-id")
 formEl.addEventListener("submit",function(e) {
     e.preventDefault()
     seedHex = document.getElementById("main-form-color").value
+    mode = document.getElementById("main-form-scheme").value
     console.log(seedHex)
-    url = "https://www.thecolorapi.com/scheme?hex="+ seedHex.slice(1)+"&count=5"
+    url = "https://www.thecolorapi.com/scheme?hex="+ seedHex.slice(1)+"&mode="+mode+"&count=5"
     generateScheme()
 
 })
@@ -53,7 +54,7 @@ function render(){
 
     for(let i = 0;i<count;i++){
         colorboxColorEl[i].style.backgroundColor = colorsArr[i]
-        colorboxHexEl[i].innerHTML = colorsArr[i]
+        colorboxHexEl[i].innerHTML = colorsArr[i].slice(1)
         // colorboxHexEl[i].inner
     }
 
