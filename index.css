@@ -5,11 +5,14 @@ body {
 }
 
 #main {
+    margin-top: 5%;
     display: block;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     border: 2px blue dotted;
     min-width: 450px;
+    width: 500px;
 }
 
 
