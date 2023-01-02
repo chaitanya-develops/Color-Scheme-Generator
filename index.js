@@ -22,16 +22,7 @@ formEl.addEventListener("submit",function(e) {
 
 })
 
-
-
-// generateColorSchemeEl.addEventListener("click",generateScheme())
-
-
-
-
 async function generateScheme(){
-    // console.log("Click")
-    // console.log(url)
     await fetch(url)
         .then(res => res.json())
         .then((data) => {
@@ -39,7 +30,6 @@ async function generateScheme(){
                 colorsArr[i] = data.colors[i].hex.value
             }
         })
-    // console.log(colorsArr)
     render()
 }
 
@@ -47,15 +37,12 @@ async function generateScheme(){
 function render(){
     for(let i = 0;i<count;i++){
         colorboxColorEl[i] = document.getElementById(colorboxColorId[i])
-        // .style.backgroundColor = colorsArr[i]
         colorboxHexEl[i] = document.getElementById(colorboxHexId[i])
-        // .textContent = colorsArr[i]
     }
 
     for(let i = 0;i<count;i++){
         colorboxColorEl[i].style.backgroundColor = colorsArr[i]
         colorboxHexEl[i].innerHTML = colorsArr[i].slice(1)
-        // colorboxHexEl[i].inner
     }
 
 }
