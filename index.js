@@ -1,7 +1,8 @@
 const count = 5
-const seedHex = ""
+let seedHex = ""
+let mode = ""
 const colorsArr = []
-const url =  "https://www.thecolorapi.com/scheme?hex=https://www.thecolorapi.com&count=5" 
+let url =  "" 
 const colorboxColorId = ["colorbox-one-color","colorbox-two-color","colorbox-three-color","colorbox-four-color","colorbox-five-color"]
 const colorboxHexId = ["colorbox-one-hex","colorbox-two-hex","colorbox-three-hex","colorbox-four-hex","colorbox-five-hex"]
 const colorboxColorEl = []
@@ -9,7 +10,20 @@ const colorboxHexEl = []
 
 const generateColorSchemeEl = document.getElementById("generate-color-scheme")
 
-generateColorSchemeEl.addEventListener("click",generateScheme())
+const formEl = document.getElementById("form-id")
+
+formEl.addEventListener("submit",function(e) {
+    e.preventDefault()
+    seedHex = document.getElementById("main-form-color").value
+    console.log(seedHex)
+    url = "https://www.thecolorapi.com/scheme?hex="+ seedHex.slice(1)+"&count=5"
+    generateScheme()
+
+})
+
+
+
+// generateColorSchemeEl.addEventListener("click",generateScheme())
 
 
 
