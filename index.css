@@ -10,7 +10,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    border: 2px blue dotted;
     min-width: 450px;
     width: 500px;
 }
@@ -36,7 +35,6 @@ body {
 }
 
 .colorbox {
-    border: inherit;
     display: flex;
     flex-direction: column;
     height: 300px;
@@ -44,12 +42,10 @@ body {
 
 .colorbox>div {
     display: flex;
-    border: inherit;
 }
 
 .colorbox>div>div {
     width: 20%;
-    border: inherit;
 }
 
 .colorbox-colors {
